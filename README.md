@@ -1,3 +1,33 @@
+Este projeto está sendo desenvolvido como a prática dos meus estudos sobre React, Next.js, Typescript, Tailwind CSS, 
+
+Como inspiração, o app de controle financeiro Organizze direciona a construção deste projeto e, consequentemente, os meus estudos.
+
+
+O projeto foi criado com o Next.js.
+
+Configuração inicial do Tailwind: definindo as cores do projeto
+
+**TODO: aprofundar sobre configuração da customização do Tailwind
+
+Criação das rotas:
+    - diretório e arquivo page.tsx
+    - layout.tsx para rotas compartilhadas
+
+Criação dos diretórios onde os componentes serão criados: src/app/ui/
+
+Importação da fonte no RootLayout()
+
+Criação da página inicial contendo o Header, um componente que usa useState() em seus links para abrir os menus flutuantes com o clique
+
+**TODO: precisa clicar novamente para fechar, senão os menus flutuantes abrem um em cima do outro, mas quero que feche clicando em qualquer outro lugar
+
+Criação dos componentes que vão aparecer nos menus flutuantes
+
+Responsividade do Header
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
