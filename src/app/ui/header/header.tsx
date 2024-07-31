@@ -1,9 +1,12 @@
 'use client'
 
-import Image from "next/image";
 import MenuNavegacao from "../menu/menu-navegacao";
 import MenuConfig from "../menu/menu-config";
 import MenuUsuario from "../menu/menu-usuario";
+import { FaGear } from "react-icons/fa6";
+import { FaBell } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai";
 
 import { useState } from "react";
 
@@ -16,18 +19,17 @@ export default function Header() {
     const alternarMenuNavegacao = () => {
         setMenuNavegacaoAberto(!menuNavegacaoAberto);
     };
-
     const alternarMenuConfig = () => {
         setMenuConfigAberto(!menuConfigAberto);
     };
-
     const alternarNotificacoesAberto = () => {
         setNotificacoesAberto(!notificacoesAberto);
     };
-
     const alternarConfigUsuarioAberto = () => {
         setConfigUsuarioAberto(!configUsuarioAberto);
     };
+
+    const iconSize = 25;
 
     return (
         <header className="flex items-center justify-between py-5 w-4/5 m-auto text-sm max-w-screen-lg bg-light dark:bg-dark">
@@ -43,18 +45,12 @@ export default function Header() {
                         onClick={alternarMenuNavegacao}
                         className="block sm:hidden"
                     >
-                        <Image
-                            src={"/menu-aberto.png"}
-                            alt="icone de menu com três barras horizontais"
-                            width={20}
-                            height={20}
-                            className=""
-                        />
+                        <AiOutlineMenu size={iconSize} />
                     </button>
                     {menuNavegacaoAberto && (
                         <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
                             <MenuNavegacao />
-                            <div className="border-t border-base-main py-2 ">
+                            <div className="border-t py-2">
                                 <MenuConfig />
                             </div>
                         </div>
@@ -64,16 +60,10 @@ export default function Header() {
                     <button
                         onClick={alternarMenuConfig}
                     >
-                        <Image
-                            src={"/engrenagem.png"}
-                            alt="Configurações"
-                            width={20}
-                            height={20}
-                            className=""
-                        />
+                        <FaGear size={iconSize}/>
                     </button>
                     {menuConfigAberto && (
-                        <div className="block absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
+                        <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
                             <MenuConfig />
 
                         </div>)}
@@ -83,12 +73,7 @@ export default function Header() {
                     <button
                         onClick={alternarNotificacoesAberto}
                     >
-                        <Image
-                            src={"/sino.png"}
-                            alt="Notificações"
-                            width={20}
-                            height={20}
-                        />
+                        <FaBell size={iconSize} />
                     </button>
                     {notificacoesAberto && (
                         <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
@@ -100,15 +85,10 @@ export default function Header() {
                     <button
                         onClick={alternarConfigUsuarioAberto}
                     >
-                        <Image
-                            src={"/forma-do-usuario.png"}
-                            alt="Conta do usuário"
-                            width={20}
-                            height={20}
-                        />
+                        <FaUser size={iconSize} />
                     </button>
                     {configUsuarioAberto && (
-                        <div className="absolute w-52 h-fit top-6 right-2 bg-font-main p-6 rounded-lg">
+                        <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
                             <MenuUsuario />
                         </div>
                     )}

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const links = [
     {
         name: 'Início',
-        href: '/',
+        href: '/pages/inicio',
         modal: 'categorias'
     }, {
         name: 'Lançamentos',
@@ -14,11 +14,11 @@ const links = [
         modal: 'contas'
     }, {
         name: 'Relatórios',
-        href: '',
+        href: '/pages/relatorios',
         modal: 'cartoes'
     }, {
         name: 'Limites de Gastos',
-        href: '',
+        href: '/pages/limites-gastos',
         modal: 'cartoes'
     }
 ]

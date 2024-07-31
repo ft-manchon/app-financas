@@ -23,8 +23,8 @@ const links = [
 export default function MenuConfig() {
     const pathname = usePathname();
     return (
-        <div>
-            <nav className="pb-2 text-sm ">
+        <div className="flex justify-start gap-10 sm:block">
+            <nav className="pb-2 text-sm w-1/2 sm:w-full">
                 {links.map((link) => {
 
                     return (
@@ -38,7 +38,7 @@ export default function MenuConfig() {
                     )
                 })}
             </nav>
-            <div className="border-t border-font-main py-2">
+            <div className="w-1/2 sm:w-full sm:border-t sm:py-2 ">
                 <MenuConfigApp />
             </div>
         </div>
