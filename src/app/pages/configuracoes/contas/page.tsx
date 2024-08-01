@@ -1,15 +1,10 @@
+import ConfigContas from "@/app/ui/configuracoes/config-contas";
+
 export default function Contas() {
     return (
-        <div>
+        <>
             <p>Contas</p>
-            <p>Contas</p>
-            <p>Contas</p>
-            <p>Contas</p>
-            <p>Contas</p>
-            <p>Contas</p>
-            <p>Contas</p>
-            <p>Contas</p>
-            <p>Contas</p>
-        </div>
+            <ConfigContas />
+        </>
     )
 }

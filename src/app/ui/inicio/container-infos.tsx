@@ -6,12 +6,13 @@ import CardCategorias from "./card-categorias-mes";
 
 export default function ContainerInfos() {
     return (
-        <div className="flex flex-col gap-10 w-full max-w-screen-md">
+        <div className="flex flex-col gap-10 w-full max-w-screen-lg">
             <BannerPrincipal />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <CardCartoes />
                 <CardContas />
-                <CardLancamentosPrevistos tipo="A pagar"/>
+                <CardLancamentosPrevistos tipo="pagar"/>
+                <CardLancamentosPrevistos tipo="receber"/>
                 <CardCategorias />
             </div>
         </div>

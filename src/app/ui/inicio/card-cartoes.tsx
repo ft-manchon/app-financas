@@ -11,7 +11,6 @@ export default function CardCartoes() {
             <div className="w-full border-t">
                 <h1 className="text-base pt-4">Meus cartões</h1>
                 <Cartoes />
-                {/* <Cartao /> */}
             </div>
             <div className="w-full font-bold p-2 my-4 border-t border-b text-center">
                 <Link

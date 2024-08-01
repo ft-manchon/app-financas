@@ -28,7 +28,7 @@ export default function BannerPrincipal() {
     return (
         <div className="bg-light p-5 sm:p-10 flex flex-col md:flex-row items-center justify-between rounded-lg gap-4 md:gap-16">
             <div className="w-full md:w-3/5 h-fit flex flex-col gap-4">
-                <div className="text-lg md:text-base">
+                <div className="text-lg">
                     <div className="flex justify-start items-center gap-4">
                         <h1 className="">{`${mensagem},`}
                         </h1>

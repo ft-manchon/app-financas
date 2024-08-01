@@ -1,41 +1,23 @@
 'use client'
 
 import Link from "next/link";
+import { linksMenuNavegacao } from "@/app/lib/placeholder_data";
 import { usePathname } from "next/navigation";
 
-const links = [
-    {
-        name: 'Início',
-        href: '/pages/inicio',
-        modal: 'categorias'
-    }, {
-        name: 'Lançamentos',
-        href: '/pages/lancamentos',
-        modal: 'contas'
-    }, {
-        name: 'Relatórios',
-        href: '/pages/relatorios',
-        modal: 'cartoes'
-    }, {
-        name: 'Limites de Gastos',
-        href: '/pages/limites-gastos',
-        modal: 'cartoes'
-    }
-]
 
 export default function MenuNavegacao() {
     const pathname = usePathname();
 
     return (
             <nav className="block sm:flex sm:items-center sm:justify-between sm:gap-4 pb-2 sm:pb-0">
-                {links.map((link) => {
+                {linksMenuNavegacao.map((link) => {
                     return (
                         <Link
-                            key={link.name}
+                            key={link.nome}
                             href={link.href}
                             className={`${link.href === pathname ? 'text-emphasis' : ''}`}
                         >
-                            <p className="py-2">{link.name}</p>
+                            <p className="py-2">{link.nome}</p>
                         </Link>
                     )
                 })}

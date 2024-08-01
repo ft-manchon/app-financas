@@ -2,7 +2,23 @@ import Link from "next/link";
 import ValoresTotais from "./mini-card-valor-total";
 import Contas from "../contas/contas";
 
-export default function CardContas() {
+
+const tipo = [
+    {
+        nome: "Minhas contas",
+        href: "/pages/configuracoes/contas",
+        key: "contas",
+        botao: 'Gerenciar contas'
+    },
+    {
+        nome: "Meus cartões",
+        href: "/pages/configuracoes/cartoes-de-credito",
+        key: "cartoes",
+        botao: 'Gerenciar cartões'
+    }
+]
+
+export default function Card() {
     return (
         <div className="bg-light p-5 sm:p-10 w-full h-fit flex flex-col items-start justify-between gap-10 rounded-lg">
             <div className="pl-2 border-l-4">
