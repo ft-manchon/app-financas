@@ -19,14 +19,26 @@ export default function Header() {
     const alternarMenuNavegacao = () => {
         setMenuNavegacaoAberto(!menuNavegacaoAberto);
     };
+    const fecharMenuNavegacao = () => {
+        setMenuNavegacaoAberto(false);
+    };
     const alternarMenuConfig = () => {
         setMenuConfigAberto(!menuConfigAberto);
+    };
+    const fecharMenuConfig = () => {
+        setMenuConfigAberto(false);
     };
     const alternarNotificacoesAberto = () => {
         setNotificacoesAberto(!notificacoesAberto);
     };
+    const fecharNotificacoes = () => {
+        setNotificacoesAberto(false);
+    };
     const alternarConfigUsuarioAberto = () => {
         setConfigUsuarioAberto(!configUsuarioAberto);
+    };
+    const fecharConfigUsuario = () => {
+        setConfigUsuarioAberto(false);
     };
 
     const iconSize = 25;
@@ -43,55 +55,61 @@ export default function Header() {
                 <li className="relative">
                     <button
                         onClick={alternarMenuNavegacao}
+                        onMouseLeave={fecharMenuNavegacao}
                         className="block sm:hidden"
                     >
                         <AiOutlineMenu size={iconSize} />
-                    </button>
-                    {menuNavegacaoAberto && (
-                        <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
-                            <MenuNavegacao />
-                            <div className="border-t py-2">
-                                <MenuConfig />
+                        {menuNavegacaoAberto && (
+                            <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
+                                <MenuNavegacao />
+                                <div className="border-t py-2">
+                                    <MenuConfig />
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </button>
                 </li>
                 <li className="relative flex">
                     <button
                         onClick={alternarMenuConfig}
+                        onMouseLeave={fecharMenuConfig}
+                        className="text-left"
                     >
-                        <FaGear size={iconSize}/>
-                    </button>
-                    {menuConfigAberto && (
-                        <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
-                            <MenuConfig />
+                        <FaGear size={iconSize} />
+                        {menuConfigAberto && (
+                            <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
+                                <MenuConfig />
 
-                        </div>)}
+                            </div>)
+                        }
+                    </button>
                 </li>
 
                 <li className="relative flex bg-ligth">
                     <button
                         onClick={alternarNotificacoesAberto}
+                        onMouseLeave={fecharNotificacoes}
                     >
                         <FaBell size={iconSize} />
+                        {notificacoesAberto && (
+                            <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
+                                <p>notificações</p>
+                            </div>
+                        )}
                     </button>
-                    {notificacoesAberto && (
-                        <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
-                            <p>notificações</p>
-                        </div>
-                    )}
                 </li>
                 <li className="relative flex bg-font-main">
                     <button
                         onClick={alternarConfigUsuarioAberto}
+                        onMouseLeave={fecharConfigUsuario}
                     >
                         <FaUser size={iconSize} />
+                        {configUsuarioAberto && (
+                            <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
+                                <MenuUsuario />
+                            </div>
+                        )}
                     </button>
-                    {configUsuarioAberto && (
-                        <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
-                            <MenuUsuario />
-                        </div>
-                    )}
                 </li>
             </ul>
 

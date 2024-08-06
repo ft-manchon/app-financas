@@ -1,4 +1,4 @@
-import { categorias } from "@/app/lib/placeholder_data"
+import { categorias } from "@/app/lib/placeholder_data";
 
 export default function ConfigCategorias() {
 
