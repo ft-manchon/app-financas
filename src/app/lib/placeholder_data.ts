@@ -1,3 +1,4 @@
+import { MdHome } from "react-icons/md";
 const cartoes = [
     {
         nome: "Cartão 1",
@@ -5,23 +6,26 @@ const cartoes = [
         fechamento: 3,
         vencimento: 10,
         conta_pagamento: "Santander",
-        icone: ''
+        cor: 'dark',
+        icone: '1'
     },
     {
         nome: "Cartão 2",
-        limite: 5000.00,
+        limite: 5000.15,
         fechamento: 24,
         vencimento: 5,
         conta_pagamento: "Itaú",
-        icone: ''
+        cor: 'emphasis',
+        icone: '2'
     },
     {
         nome: "Cartão 3",
-        limite: 2000.00,
+        limite: 2000.12,
         fechamento: 12,
         vencimento: 18,
         conta_pagamento: "Caixa",
-        icone: ''
+        cor: 'dark',
+        icone: '3'
     },
 ]
 
@@ -31,40 +35,50 @@ const contas = [
         nome: "Conta 1",
         valorInicial: 150.00,
         saldo: 1050.00,
-        icone: ''
+        cor: 'dark',
+        icone: '1'
     },
     {
         nome: "Conta 2",
         valorInicial: 50.00,
         saldo: 2489.76,
-        icone: ''
+        cor: 'emphasis',
+        icone: '2'
     },
     {
         nome: "Conta 3",
         valorInicial: 20.00,
         saldo: 1263.21,
-        icone: ''
+        cor: 'dark',
+        icone: '3'
     },
     {
         nome: "Conta 4",
         valorInicial: 0.00,
         saldo: 25663.21,
-        icone: ''
+        cor: 'emphasis',
+        icone: '4'
     },
 ]
 
 const categorias = [
     {
         nome: 'Alimentação',
-        tipo: 'despesa'
+        tipo: 'despesa',
+        cor: 'dark',
+        icone: 'a'
     },
     {
         nome: 'Moradia',
-        tipo: 'despesa'
+        tipo: 'despesa',
+        cor: 'emphasis',
+        icone: 'm'
     },
     {
         nome: 'Mercado',
-        tipo: 'despesa'
+        tipo: 'despesa',
+        cor: 'dark',
+        icone: 'm'
     },
 ]
 

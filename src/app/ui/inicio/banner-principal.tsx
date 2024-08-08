@@ -25,6 +25,17 @@ export default function BannerPrincipal() {
         icon = <BsFillMoonStarsFill />
     }
 
+    const totais = [
+        {
+            nome: "receita mensal",
+            valor: 1500.25
+        },
+        {
+            nome: "despesa mensal",
+            valor: 1254.72,
+        },
+    ]
+
     return (
         <div className="bg-light p-5 sm:p-10 flex flex-col md:flex-row items-center justify-between rounded-lg gap-4 md:gap-16">
             <div className="w-full md:w-3/5 h-fit flex flex-col gap-4">
@@ -38,17 +49,20 @@ export default function BannerPrincipal() {
                 </div>
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="flex flex-row gap-4">
-                        <div className="shadow-lg p-3 sm:p-4">
-                            <ValoresTotais nome="receita mensal" valor="1.500,25" />
-                        </div>
-                        <div className="shadow-lg p-3 sm:p-4">
-                            <ValoresTotais nome="despesa mensal" valor="1.254,72" />
-                        </div>
+                        {
+                            totais.map((total) => {
+                                return (
+                                    <div className="shadow-lg p-3 sm:p-4 rounded-lg">
+                                        <ValoresTotais nome={total.nome} valor={total.valor} />
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                     <div>
                         <Link
                             href={'/pages/relatorios'}
-                            className="flex items-center gap-1 shadow-xl p-3 sm:p-4 w-fit">
+                            className="flex items-center gap-2 shadow-xl p-3 sm:p-4 w-fit rounded-lg">
                             <FaArrowTrendUp />
                             <p>ver relatórios</p>
                         </Link>

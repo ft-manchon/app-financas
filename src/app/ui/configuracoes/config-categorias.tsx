@@ -1,4 +1,5 @@
 import { categorias } from "@/app/lib/placeholder_data";
+import Icone from "../icones/icone";
 
 export default function ConfigCategorias() {
 
@@ -6,7 +7,7 @@ export default function ConfigCategorias() {
         return (
             <div className="flex items-center justify-between p-2 border-b border-base-main">
                 <div className="flex items-center gap-4">
-                    <div className="bg-emphasis w-6 h-6 rounded-full"></div>
+                    <Icone cor={categoria.cor} icone={categoria.icone} />
                     <div>
                         <p>{categoria.nome}</p>
                     </div>

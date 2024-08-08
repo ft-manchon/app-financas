@@ -35,16 +35,16 @@ export default function AcessoRapido() {
             <div className="flex items-end justify-between flex-wrap ">
                 <BotaoDeAcao nome="despesa" tipo="despesa" onClick={alternarNovaDespesa} />
                 {novaDespesa && (
-                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4 pt-40">
-                        <div className="flex items-center justify-center">
+                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4 ">
+                        <div className="flex items-center justify-center h-svh">
                             <NovaDespesa fechar={alternarNovaDespesa} />
                         </div>
                     </div>
                 )}
                 <BotaoDeAcao nome="receita" tipo="receita" onClick={alternarNovaReceita} />
                 {novaReceita && (
-                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4 pt-40">
-                        <div className="flex items-center justify-center">
+                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4">
+                        <div className="flex items-center justify-center h-svh">
                             <NovaDespesa fechar={alternarNovaReceita} />
                         </div>
                     </div>
@@ -52,16 +52,16 @@ export default function AcessoRapido() {
                 )}
                 <BotaoDeAcao nome="transf." tipo="transferencia" onClick={alternarNovaTransferencia} />
                 {novaTransferencia && (
-                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4 pt-40">
-                        <div className="flex items-center justify-center">
+                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4">
+                        <div className="flex items-center justify-center h-svh">
                             <NovaTransferecia fechar={alternarNovaTransferencia} />
                         </div>
                     </div>
                 )}
                 <BotaoDeAcao nome="importar" tipo="importar" onClick={alternarNovaImportacao} />
                 {novaImportacao && (
-                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4 pt-40">
-                        <div className="flex items-center justify-center ">
+                    <div className="fixed top-0 left-0 bottom-0 right-0 w-full bg-dark bg-opacity-35 p-4">
+                        <div className="flex items-center justify-center h-svh ">
                             <NovaImportacao fechar={alternarNovaImportacao} />
                         </div>
                     </div>

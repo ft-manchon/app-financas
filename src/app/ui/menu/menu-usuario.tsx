@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MenuUsuario() {
     return (
-        <div className="absolute w-52 h-fit top-6 right-2 bg-light p-6 rounded-lg">
+        <>
             <div className=" w-full flex flex-col items-center justify-between gap-2 border-b py-4">
                 <div className=" border border-base-main rounded-full w-fit p-2">
                     <Image
@@ -30,6 +30,6 @@ export default function MenuUsuario() {
                     <p className="py-2">Sair</p>
                 </Link>
             </div>
-        </div>
+        </>
     )
 }
