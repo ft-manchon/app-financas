@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import BotaoDeAcao from "../botoes/botao-acao";
+import BotaoDeAcao from "../botoes/botao-acao-banner-principal";
 import NovaDespesa from "../novos-lancamentos/nova-despesa";
 import NovaTransferecia from "../novos-lancamentos/nova-transferencia";
 import NovaImportacao from "../novos-lancamentos/nova-importacao";
